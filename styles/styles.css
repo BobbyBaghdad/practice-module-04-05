@@ -42,14 +42,23 @@ body p ul {
   margin-right: auto;
 }
 
+.section {
+  padding-top: 94px;
+  padding-right: 94px;
+}
+
 /* HEADER */
 
 .page-header {
   border: 1px solid #ececec;
   display: flex;
   align-items: center;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
-
 /* Logo */
 
 .header-logo {
@@ -121,8 +130,13 @@ body p ul {
 .header-feedback-icon {
   width: 16px;
   height: 12px;
+  padding: 1px;
 }
 
+.header-feedback-icon:hover,
+.header-feedback-icon:focus {
+  fill: var(--accent);
+}
 /* STUDIO */
 
 /* HERO section  */
@@ -247,11 +261,12 @@ body p ul {
 .team-list {
   display: flex;
   justify-content: center;
-  margin-: 0px;
+  margin: 0px;
 }
 
 .team-cards {
-  border: 1px solid rgba(0, 0, 0, 1);
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 3px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
 }
 .team-cards:not(:last-child) {
   margin-right: 30px;
@@ -276,12 +291,17 @@ body p ul {
 .team-links-icons {
   width: 20px;
   height: 20px;
+  fill: #afb1b8;
 }
 .team-links-icons:not(:last-child) {
   margin-right: 10px;
 }
-.team-links-icons: {
+.team-links-icons:hover,
+.team-links-icons:focus {
+  fill: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
 .container-icons {
   width: 206px;
   height: 44px;
@@ -309,68 +329,15 @@ body p ul {
   border: 1px solid #afb1b8;
   margin-top: 50px;
   margin-bottom: 94px;
+  fill: #afb1b8;
 }
 .clients-icons:not(:last-child) {
   margin-right: 30px;
 }
-
-/* PORTFOLIO PAGE */
-
-/* MAIN section */
-*/ .portfolio {
-  background-color: var(--portfoliosection);
-}
-.tools {
-  display: flex;
-  justify-content: center;
-}
-.tools-button + .tools-button {
-  margin-left: 8px;
-}
-.tools button {
-  border-radius: 4px;
-  padding: 6px 22px;
-  min-width: 73px;
-  border: 1px solid transparent;
-  color: var(--h-clr);
-  background-color: var(--activitysection);
-  cursor: pointer;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.6;
-  text-align: center;
-  font-family: inherit;
-}
-.tools button:hover,
-.tools button:focus {
-  color: var(--main-bcgclr);
-  background-color: var(--accent);
-}
-
-.example-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-.example-element {
-  width: calc((100% - 60px) / 3);
-  margin-right: 30px;
-  margin-bottom: 30px;
-  border: 1px solid #eeeeee;
-}
-.example-element:nth-child(3n) {
-  margin-right: 0px;
-}
-
-.example {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-}
-.example-activity {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.9;
+.clients-icons:hover,
+.clients-icons:focus {
+  fill: var(--accent);
+  border-color: var(--accent);
 }
 
 /* FOOTER */
@@ -381,8 +348,6 @@ body p ul {
 
 .page-footer .header-logo {
   margin-top: 60px;
-}
-.page-footer {
 }
 
 /* FOOTER - CONTACTS */
@@ -420,5 +385,75 @@ body p ul {
   display: inline;
   width: 44px;
   height: 44px;
+  fill: #ffffff;
   background-color: rgba(2556, 255, 255, 0.1);
+}
+.footer-media-icons:hover,
+.footer-media-icons:focus {
+  fill: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #2196f3;
+}
+
+/* PORTFOLIO PAGE */
+
+/* MAIN section */
+*/ .portfolio {
+  background-color: var(--portfoliosection);
+}
+.tools {
+  display: flex;
+  justify-content: center;
+}
+.tools-button + .tools-button {
+  margin-left: 8px;
+}
+.tools button {
+  border-radius: 4px;
+  padding: 6px 22px;
+  min-width: 73px;
+  border: 1px solid transparent;
+  color: var(--h-clr);
+  background-color: var(--activitysection);
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  font-family: inherit;
+}
+.tools button:hover,
+.tools button:focus {
+  color: var(--main-bcgclr);
+  background-color: var(--accent);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.example-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.example-element {
+  width: calc((100% - 60px) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
+  border: 1px solid #eeeeee;
+}
+.example-element:nth-child(3n) {
+  margin-right: 0px;
+}
+.example-element:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.example {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+.example-activity {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.9;
 }
